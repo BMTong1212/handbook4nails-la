@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Nail Salon Employee Handbook · Tự Tạo Cẩm Nang Cho Nhân Viên — Louisiana</title>
+<meta name="description" content="Tự tạo cẩm nang nhân viên W-2 song ngữ cho tiệm nail của bạn tại Louisiana trong 5 phút — điền thông tin, xem trước, và tải PDF.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --ivory:#F7F3EE; --linen:#EFE7DD; --stone:#D8CBBE; --taupe:#9A8F84;
+    --olive:#5F6654; --oliveD:#4A5142; --charcoal:#3A3A3A; --brass:#C8B08B; --espresso:#43362B;
+    --line:#E3D9CC; --ok:#496B5A;
+    --fd:'Cormorant Garamond',Georgia,serif; --fb:'Inter','Helvetica Neue',Arial,sans-serif;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:var(--fb); color:var(--charcoal); background:var(--ivory); line-height:1.6; font-size:15px; }
+  h1,h2,h3{ font-family:var(--fd); font-weight:600; color:var(--espresso); line-height:1.12; }
+  a{ color:var(--olive); }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 22px; }
+
+  header.top{ border-bottom:1px solid var(--line); background:rgba(247,243,238,.94); backdrop-filter:blur(8px); position:sticky; top:0; z-index:30; }
+  header.top .wrap{ display:flex; align-items:center; justify-content:space-between; height:62px; }
+  .brand{ font-family:var(--fd); font-size:20px; color:var(--espresso); letter-spacing:.3px; }
+  .brand small{ font-family:var(--fb); display:block; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--taupe); margin-top:-2px; }
+  .price-pill{ background:var(--olive); color:var(--ivory); font-weight:700; font-size:14px; padding:8px 18px; border-radius:999px; text-decoration:none; transition:.18s; }
+  .price-pill:hover{ background:var(--oliveD); transform:translateY(-1px); }
+  .hero-cta{ display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap; }
+  .btn-hero{ display:inline-flex; align-items:center; gap:9px; background:var(--olive); color:var(--ivory); font-weight:700; font-size:16px; padding:14px 30px; border-radius:12px; text-decoration:none; transition:.18s; box-shadow:0 8px 20px rgba(95,102,84,.22); }
+  .btn-hero:hover{ background:var(--oliveD); transform:translateY(-2px); }
+  .btn-hero.ghost{ background:transparent; color:var(--olive); border:1.5px solid var(--stone); box-shadow:none; }
+  .btn-hero.ghost:hover{ background:var(--linen); }
+
+  .hero{ text-align:center; padding:54px 22px 32px; }
+  .hero .ey{ font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--taupe); font-weight:600; }
+  .hero h1{ font-size:44px; margin:12px 0 6px; }
+  .hero .h-vi{ font-family:var(--fd); font-size:26px; color:var(--olive); }
+  .hero p{ max-width:60ch; margin:16px auto 0; color:#5b5750; }
+  .steps{ display:flex; gap:26px; justify-content:center; margin-top:24px; flex-wrap:wrap; font-size:13px; color:var(--taupe); }
+  .steps b{ color:var(--olive); font-family:var(--fd); font-size:17px; margin-right:6px; }
+
+  .builder{ display:grid; grid-template-columns:1fr 1.05fr; gap:28px; padding:14px 0 60px; align-items:start; }
+  @media(max-width:900px){ .builder{ grid-template-columns:1fr; } }
+
+  .panel{ background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:0 10px 30px rgba(58,46,35,.07); }
+  .form-panel{ padding:26px 26px 22px; position:sticky; top:80px; }
+  @media(max-width:900px){ .form-panel{ position:static; } }
+  .form-panel h2{ font-size:24px; margin-bottom:2px; }
+  .form-panel .sub{ font-size:12.5px; color:var(--taupe); margin-bottom:18px; }
+  .fset{ border:none; margin-bottom:18px; }
+  .fset legend{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--olive); font-weight:700; margin-bottom:10px; padding-bottom:6px; border-bottom:1px solid var(--line); width:100%; }
+  .fg{ margin-bottom:13px; }
+  .fg.two{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  label{ display:block; font-size:12px; font-weight:600; color:var(--espresso); margin-bottom:4px; }
+  label .vi{ color:var(--taupe); font-weight:400; }
+  input,select{ width:100%; padding:10px 12px; border:1px solid var(--stone); border-radius:9px; font:inherit; font-size:14px; background:#fdfcfa; color:var(--charcoal); }
+  input:focus,select:focus{ outline:none; border-color:var(--olive); box-shadow:0 0 0 3px rgba(95,102,84,.12); }
+  .req{ color:#a3563f; }
+  .radios{ display:flex; gap:10px; }
+  .radios label{ flex:1; border:1px solid var(--stone); border-radius:9px; padding:9px; text-align:center; cursor:pointer; font-weight:500; font-size:13px; background:#fdfcfa; margin:0; transition:.15s; }
+  .radios input{ display:none; }
+  .radios input:checked + span{ }
+  .radios label:has(input:checked){ border-color:var(--olive); background:var(--linen); color:var(--espresso); font-weight:700; }
+  .logo-up{ display:flex; align-items:center; gap:12px; }
+  .logo-up .prev{ width:54px; height:54px; border:1px dashed var(--stone); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:9px; color:var(--taupe); overflow:hidden; flex:0 0 54px; }
+  .logo-up .prev img{ width:100%; height:100%; object-fit:contain; }
+  .hint{ font-size:11px; color:var(--taupe); margin-top:3px; }
+
+  .cta{ margin-top:6px; }
+  .btn{ display:block; width:100%; text-align:center; background:var(--olive); color:var(--ivory); border:none; font-family:var(--fb); font-weight:700; font-size:16px; padding:15px; border-radius:11px; cursor:pointer; transition:.18s; }
+  .btn:hover{ background:var(--oliveD); transform:translateY(-1px); }
+  .btn small{ display:block; font-weight:500; font-size:11.5px; opacity:.85; margin-top:2px; }
+  .note{ font-size:11px; color:var(--taupe); text-align:center; margin-top:9px; line-height:1.5; }
+
+  .preview-panel{ overflow:hidden; }
+  .pv-head{ display:flex; align-items:center; justify-content:space-between; padding:12px 18px; border-bottom:1px solid var(--line); background:var(--linen); }
+  .pv-head .t{ font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--olive); font-weight:700; }
+  .pv-head .live{ font-size:11px; color:var(--ok); font-weight:600; display:flex; align-items:center; gap:6px; }
+  .pv-head .live::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--ok); display:inline-block; animation:pulse 1.6s infinite; }
+  @keyframes pulse{ 0%,100%{opacity:1} 50%{opacity:.35} }
+  iframe#pv{ width:100%; height:760px; border:none; background:#fff; display:block; }
+
+  /* SUCCESS STATE */
+  .success{ display:none; text-align:center; padding:30px 26px; }
+  .success.show{ display:block; }
+  .success .ic{ width:60px; height:60px; border-radius:50%; background:var(--ok); color:#fff; font-size:30px; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; }
+  .success h3{ font-size:24px; margin-bottom:6px; }
+  .success p{ font-size:13.5px; color:var(--taupe); margin-bottom:18px; }
+
+  footer{ border-top:1px solid var(--line); background:var(--linen); padding:26px 22px; text-align:center; font-size:11.5px; color:var(--taupe); line-height:1.7; }
+  footer strong{ color:var(--espresso); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Nail Salon Handbook Builder<small>Louisiana · W-2 · Song ngữ</small></div>
+    <a href="#builder" class="price-pill">$29 · Start →</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="ey">Custom Employee Handbook · Tự Tạo Cẩm Nang Cho Nhân Viên</div>
+    <h1>Your salon's W-2 handbook, in 5 minutes</h1>
+    <div class="h-vi">Cẩm nang W-2 riêng cho tiệm của bạn — làm xong trong 5 phút</div>
+    <p>Bilingual (English / Vietnamese), built for Louisiana nail salons — pay, taxes, benefits &amp; license.<br><span style="color:var(--taupe)">Song ngữ, cho tiệm nail ở Louisiana — điền thông tin là có ngay file PDF.</span></p>
+    <div class="hero-cta">
+      <a href="#builder" class="btn-hero">Build mine — $29 <span>→</span></a>
+      <a href="#builder" class="btn-hero ghost">See it live · Xem trước</a>
+    </div>
+    <div class="steps"><span><b>1</b>Fill in details · Điền thông tin</span><span><b>2</b>Preview live · Xem trước</span><span><b>3</b>Download PDF · Tải PDF</span></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="builder" id="builder">
+
+    <!-- ============ FORM ============ -->
+    <div class="panel form-panel">
+      <h2>Customize your handbook</h2>
+      <div class="sub">Tùy chỉnh cẩm nang của bạn · <span style="color:var(--req)">*</span> required / bắt buộc</div>
+      <form id="hbForm" autocomplete="on">
+
+        <fieldset class="fset">
+          <legend>Your contact · Liên hệ của bạn</legend>
+          <div class="fg two">
+            <div><label>Your name <span class="vi">/ Họ tên</span> <span class="req">*</span></label><input name="contact_name" required placeholder="Nguyễn..."></div>
+            <div><label>Phone <span class="vi">/ Điện thoại</span> <span class="req">*</span></label><input name="contact_phone" type="tel" required placeholder="(504) ..."></div>
+          </div>
+          <div class="fg"><label>Email <span class="req">*</span></label><input name="contact_email" type="email" required placeholder="email@example.com"></div>
+          <div class="fg"><label>City <span class="vi">/ Thành phố</span> <span class="req">*</span></label><input name="contact_city" required placeholder="New Orleans, LA"></div>
+        </fieldset>
+
+        <fieldset class="fset">
+          <legend>Salon details · Thông tin tiệm</legend>
+          <div class="fg"><label>Salon name <span class="vi">/ Tên tiệm</span> <span class="req">*</span></label><input id="f_salon" name="salon" required placeholder="Sunshine Nails & Spa"></div>
+          <div class="fg"><label>Owner name <span class="vi">/ Tên chủ tiệm</span></label><input id="f_owner" name="owner" placeholder="..."></div>
+          <div class="fg"><label>Salon address <span class="vi">/ Địa chỉ tiệm</span></label><input id="f_address" name="address" placeholder="123 Main St, New Orleans, LA 70112"></div>
+          <div class="fg"><label>Slogan <span class="vi">/ Khẩu hiệu (tùy chọn)</span></label><input id="f_slogan" name="slogan" placeholder="Where beauty meets care."></div>
+          <div class="fg"><label>Salon logo <span class="vi">/ Logo tiệm (tùy chọn)</span></label>
+            <div class="logo-up"><div class="prev" id="logoPrev">LOGO</div><input id="f_logo" type="file" accept="image/*" style="border:none;padding:6px 0"></div>
+            <div class="hint">PNG/JPG · appears on the cover · hiện trên trang bìa</div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fset">
+          <legend>Pay setup · Cách trả lương</legend>
+          <div class="fg"><label>Pay frequency <span class="vi">/ Kỳ trả lương</span></label>
+            <div class="radios">
+              <label><input type="radio" name="freq" value="weekly" checked><span>Weekly · Hàng tuần</span></label>
+              <label><input type="radio" name="freq" value="biweekly"><span>Every 2 weeks · Hai tuần</span></label>
+            </div>
+          </div>
+          <div class="fg two">
+            <div><label>Pay day <span class="vi">/ Ngày trả</span></label><input id="f_payday" name="payday" placeholder="every Friday · thứ Sáu"></div>
+            <div><label>Effective date <span class="vi">/ Ngày áp dụng</span></label><input id="f_date" name="effdate" placeholder="01/01/2026"></div>
+          </div>
+        </fieldset>
+
+        <div class="cta">
+          <button type="submit" class="btn">Build &amp; Download my PDF — $29<small>Tạo &amp; tải PDF cẩm nang của tôi</small></button>
+          <p class="note">Your info is saved so we can send your handbook + updates. · Thông tin của bạn được lưu để gửi cẩm nang và cập nhật.<br><span id="payNote"></span></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- ============ PREVIEW ============ -->
+    <div class="panel preview-panel">
+      <div class="pv-head"><span class="t">Live preview · Xem trước</span><span class="live">Updating · Đang cập nhật</span></div>
+      <iframe id="pv" title="Handbook preview"></iframe>
+      <div class="success" id="successBox">
+        <div class="ic">✓</div>
+        <h3>Your handbook is ready! · Cẩm nang đã sẵn sàng!</h3>
+        <p>A print dialog opened — choose <strong>“Save as PDF.”</strong><br>Hộp in vừa mở — chọn <strong>“Save as PDF”</strong> để lưu file.</p>
+        <button class="btn" id="dlAgain" style="max-width:280px;margin:0 auto">Download / Print again · Tải lại</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <strong>Reference template only · Chỉ là mẫu tham khảo</strong> — This handbook is a general bilingual template for Louisiana nail salons, not legal, tax, or accounting advice. Each salon should consult a licensed CPA or attorney.<br>
+  Mẫu cẩm nang chung cho tiệm nail Louisiana, không phải tư vấn pháp lý/thuế/kế toán. Mỗi tiệm nên hỏi CPA hoặc luật sư có giấy phép.
+</footer>
+
+<!-- ===== EBOOK TEMPLATE (filled live by JS) ===== -->
+<script type="text/template" id="tpl"><!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nail Salon Employee Handbook · Cẩm Nang Nhân Viên — Louisiana (W-2)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --ivory:#F7F3EE; --linen:#EFE7DD; --stone:#D8CBBE; --taupe:#9A8F84;
+    --olive:#5F6654; --charcoal:#3A3A3A; --brass:#C8B08B; --espresso:#43362B;
+    --line:#E3D9CC; --line2:#D8CBBE;
+    --fd:'Cormorant Garamond',Georgia,serif; --fb:'Inter','Helvetica Neue',Arial,sans-serif;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:var(--fb); color:var(--charcoal); background:var(--stone); line-height:1.65; font-size:15.5px;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; min-height:11in; margin:22px auto; background:var(--ivory); box-shadow:0 12px 40px rgba(58,46,35,.16);
+    padding:0.85in 0.9in; position:relative; }
+  @media print{ body{ background:#fff; } .page{ margin:0; box-shadow:none; width:auto; min-height:auto; padding:0.7in 0.8in; } }
+  @page{ size:Letter; margin:0; }
+
+  h1,h2,h3,h4{ font-family:var(--fd); font-weight:600; color:var(--espresso); line-height:1.15; }
+  a{ color:var(--olive); }
+  strong{ font-weight:600; color:var(--espresso); }
+  .vi{ }
+
+  /* COVER */
+  .cover{ display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    min-height:9.3in; }
+  @media print{ .cover{ min-height:9.6in; } .page.cover-page{ break-after:page; } }
+  .cover .logo{ width:230px; height:auto; margin-bottom:34px; }
+  .logo-ph{ width:240px; height:160px; border:1.5px dashed var(--taupe); border-radius:10px; margin-bottom:34px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; color:var(--taupe); }
+  .logo-ph .lp1{ font-family:var(--fd); font-size:19px; letter-spacing:.06em; }
+  .logo-ph .lp2{ font-family:var(--fb); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; }
+  .cover .rule{ width:64px; height:1.5px; background:var(--brass); margin:22px 0; }
+  .cover .kicker{ font-family:var(--fb); font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:var(--taupe); font-weight:600; }
+  .cover h1{ font-size:52px; font-weight:600; margin:14px 0 6px; letter-spacing:.5px; }
+  .cover .h1-vi{ font-family:var(--fd); font-size:30px; color:var(--olive); font-weight:500; }
+  .cover .sub{ font-size:15px; color:var(--taupe); margin-top:18px; max-width:46ch; }
+  .cover .tagline{ font-family:var(--fd); font-style:italic; font-size:21px; color:var(--olive); margin-top:40px; }
+  .cover .meta{ margin-top:46px; font-size:13.5px; color:var(--charcoal); line-height:2; border-top:1px solid var(--line); padding-top:24px; min-width:60%; }
+  .cover .meta b{ color:var(--taupe); font-weight:600; font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
+
+  /* GENERIC */
+  .legend{ font-size:12px; color:var(--taupe); letter-spacing:.04em; text-align:center; margin-bottom:6px; text-transform:uppercase; font-weight:600; }
+
+  /* TOC */
+  .toc h2{ font-size:34px; margin-bottom:6px; }
+  .toc .sub{ font-size:14px; color:var(--taupe); margin-bottom:26px; }
+  .toc ol{ list-style:none; }
+  .toc li{ display:flex; align-items:baseline; gap:12px; padding:13px 0; border-bottom:1px solid var(--line); }
+  .toc .n{ font-family:var(--fd); font-size:20px; color:var(--brass); width:34px; flex:0 0 34px; }
+  .toc .t{ flex:1; }
+  .toc .t a{ text-decoration:none; color:var(--espresso); font-weight:600; font-size:15px; }
+  .toc .t .v{ display:block; font-size:13px; color:var(--taupe); font-weight:400; }
+
+  /* SECTION */
+  .sec{ }
+  @media print{ .sec{ break-before:page; } }
+  .sec-head{ display:flex; align-items:center; gap:18px; padding-bottom:18px; margin-bottom:26px; border-bottom:1.5px solid var(--line2); }
+  .sec-ic{ flex:0 0 52px; width:52px; height:52px; border:1.5px solid var(--brass); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; color:var(--olive); }
+  .sec-ic svg{ width:26px; height:26px; }
+  .sec-num{ font-family:var(--fd); font-size:15px; color:var(--brass); letter-spacing:.2em; }
+  .sec-head h2{ font-size:30px; margin-top:1px; }
+  .sec-head h2 .vh{ font-size:18px; color:var(--olive); font-weight:500; display:block; margin-top:4px; line-height:1.25; }
+  .sec-head h2 .sep{ display:none; }
+
+  /* BILINGUAL ROWS */
+  .bi{ display:grid; grid-template-columns:1fr 1fr; gap:0 40px; margin:0 0 16px; position:relative; }
+  .bi::before{ content:""; position:absolute; left:50%; top:2px; bottom:6px; width:1px; background:var(--line); }
+  .bi .en, .bi .vi{ font-size:14px; line-height:1.62; }
+  .bi .en{ padding-right:6px; }
+  .bi .vi{ padding-left:6px; }
+  .bi p{ margin:0 0 8px; }
+  .bi p:last-child{ margin-bottom:0; }
+  .lead-greeting{ font-family:var(--fd); font-size:17px; color:var(--espresso); }
+
+  /* CALLOUT */
+  .callout{ background:var(--linen); border-left:3px solid var(--olive); border-radius:4px; padding:16px 20px; margin:6px 0 18px; }
+  .callout.brass{ border-left-color:var(--brass); }
+  .callout .bi{ margin:0; }
+  .callout .bi::before{ background:var(--stone); }
+
+  /* TABLES */
+  table{ width:100%; border-collapse:collapse; margin:8px 0 18px; font-size:13px; }
+  th,td{ text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ font-family:var(--fb); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--taupe); font-weight:700;
+    border-bottom:1.5px solid var(--line2); background:var(--linen); }
+  tbody tr:nth-child(even){ background:rgba(216,203,190,.16); }
+  td .vi{ display:block; color:var(--olive); font-size:12.5px; margin-top:2px; }
+  .tick{ color:var(--olive); font-weight:700; } .cross{ color:#9c6b5e; font-weight:700; }
+
+  /* FAQ */
+  .faq{ margin-bottom:16px; }
+  .faq .q{ font-family:var(--fd); font-size:18px; color:var(--espresso); margin-bottom:2px; }
+  .faq .q .qv{ font-size:15px; color:var(--olive); }
+
+  /* SIGN */
+  .ack-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px 40px; margin-top:14px; }
+  .ack-box{ }
+  .ack-box h4{ font-size:18px; margin-bottom:14px; color:var(--olive); }
+  .sigline{ border-bottom:1px solid var(--taupe); height:30px; margin-bottom:6px; }
+  .sigcap{ font-size:11.5px; color:var(--taupe); }
+
+  /* OWNER REF */
+  .ref-row{ display:grid; grid-template-columns:1.3fr 1fr; gap:10px 18px; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--line); font-size:13px; }
+  .ref-row .task .vi{ color:var(--olive); display:block; font-size:12px; }
+  .ref-row .where{ font-weight:600; color:var(--espresso); }
+
+  /* DISCLAIMER */
+  .disclaimer{ background:var(--olive); color:var(--ivory); border-radius:6px; padding:22px 26px; margin-top:18px; }
+  .disclaimer .dh{ font-family:var(--fd); font-size:20px; color:#fff; margin-bottom:8px; }
+  .disclaimer p{ font-size:12.5px; line-height:1.6; opacity:.94; }
+  .disclaimer p + p{ margin-top:8px; }
+  .disclaimer .vi{ color:var(--brass); }
+
+  .foot{ margin-top:30px; padding-top:14px; border-top:1px solid var(--line); display:flex; justify-content:space-between;
+    font-size:10.5px; color:var(--taupe); letter-spacing:.05em; text-transform:uppercase; }
+
+  @media(max-width:760px){
+    .page{ width:auto; padding:24px 18px; }
+    .bi,.ack-grid,.ref-row{ grid-template-columns:1fr; gap:6px; }
+    .bi::before{ display:none; }
+    .bi .vi{ padding-left:0; border-top:1px dashed var(--line); padding-top:8px; }
+    .cover h1{ font-size:38px; }
+  }
+</style>
+</head>
+<body>
+<!-- ======== COVER ======== -->
+<div class="page cover-page">
+  <div class="cover">
+    <div class="logo-ph"><span class="lp1">YOUR SALON LOGO</span><span class="lp2">Logo tiệm của bạn</span></div>
+    <div class="kicker">Employee Handbook · Cẩm Nang Nhân Viên</div>
+    <h1>W-2 Payroll Edition</h1>
+    <div class="h1-vi">Phiên Bản Lương W-2</div>
+    <div class="rule"></div>
+    <p class="sub">A bilingual guide for our nail technicians — pay, taxes, benefits, license, and workplace care.<br>Hướng dẫn song ngữ cho thợ nail — lương, thuế, quyền lợi, giấy phép, và sự chăm sóc nơi làm việc.</p>
+    <div class="tagline">[ Your salon slogan · Khẩu hiệu của tiệm ]</div>
+    <div class="meta">
+      <div><b>Salon · Tiệm</b><br>[SALON NAME / TÊN TIỆM]</div>
+      <div style="margin-top:12px"><b>Address · Địa chỉ</b><br>[SALON ADDRESS / ĐỊA CHỈ]</div>
+      <div style="margin-top:12px"><b>Owner · Chủ tiệm</b><br>[OWNER NAME / TÊN CHỦ TIỆM]</div>
+      <div style="margin-top:12px"><b>Effective · Ngày áp dụng</b><br>[DATE / NGÀY]</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== TOC ======== -->
+<div class="page">
+  <div class="toc">
+    <h2>Contents</h2>
+    <div class="sub">Mục Lục · English (left) &nbsp;·&nbsp; Tiếng Việt (right)</div>
+    <ol>
+      <li><span class="n">01</span><span class="t"><a href="#s1">Welcome Letter</a><span class="v">Thư Chào Mừng</span></span></li>
+      <li><span class="n">02</span><span class="t"><a href="#s2">What Changed: 1099 vs W-2</a><span class="v">Sự Khác Biệt Giữa 1099 và W-2</span></span></li>
+      <li><span class="n">03</span><span class="t"><a href="#s3">Your Pay</a><span class="v">Tiền Lương Của Bạn</span></span></li>
+      <li><span class="n">04</span><span class="t"><a href="#s4">Your Taxes</a><span class="v">Thuế Của Bạn</span></span></li>
+      <li><span class="n">05</span><span class="t"><a href="#s5">Your Benefits &amp; Protections</a><span class="v">Quyền Lợi &amp; Sự Bảo Vệ</span></span></li>
+      <li><span class="n">06</span><span class="t"><a href="#s6">Your License</a><span class="v">Giấy Phép Hành Nghề</span></span></li>
+      <li><span class="n">07</span><span class="t"><a href="#s7">Workplace Rules</a><span class="v">Nội Quy Làm Việc</span></span></li>
+      <li><span class="n">08</span><span class="t"><a href="#s8">Frequently Asked Questions</a><span class="v">Câu Hỏi Thường Gặp</span></span></li>
+      <li><span class="n">09</span><span class="t"><a href="#s9">Acknowledgment Page</a><span class="v">Trang Xác Nhận</span></span></li>
+    </ol>
+  </div>
+</div>
+
+<!-- ======== 01 WELCOME ======== -->
+<div class="page">
+<section class="sec" id="s1">
+  <div class="sec-head">
+    <span class="sec-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+    <div><div class="sec-num">01</div><h2>Welcome Letter <span class="sep">/</span><span class="vh">Thư Chào Mừng</span></h2></div>
+  </div>
+  <div class="bi"><div class="en"><p class="lead-greeting">Dear [EMPLOYEE NAME],</p></div><div class="vi"><p class="lead-greeting">Kính gửi [TÊN NHÂN VIÊN],</p></div></div>
+  <div class="bi"><div class="en"><p>Welcome to <strong>[SALON NAME]</strong> — we're so glad you're part of our family.</p></div><div class="vi"><p>Chào mừng anh/chị đến với <strong>[TÊN TIỆM]</strong> — chúng tôi rất vui khi có anh/chị trong gia đình tiệm.</p></div></div>
+  <div class="bi"><div class="en"><p>You may have noticed that we now pay through <strong>W-2 payroll</strong> instead of <strong>1099</strong>. We want to explain why, clearly and honestly.</p></div><div class="vi"><p>Anh/chị có thể đã thấy là bây giờ tiệm trả lương theo dạng <strong>W-2</strong> thay vì <strong>1099</strong>. Chúng tôi muốn giải thích lý do một cách rõ ràng và thành thật.</p></div></div>
+  <div class="bi"><div class="en"><p>The law (IRS + Louisiana) says that workers who follow the salon's schedule, use the salon's tools, and work under the salon's direction are <strong>employees</strong> — not independent contractors. Paying you correctly keeps both you and the salon safe from penalties, back taxes, and audits.</p></div><div class="vi"><p>Luật (IRS + tiểu bang Louisiana) nói rằng người làm theo giờ giấc của tiệm, dùng đồ nghề của tiệm, và làm theo sự sắp xếp của tiệm là <strong>nhân viên</strong> — không phải thầu phụ độc lập. Trả lương đúng giúp cả anh/chị và tiệm tránh bị phạt, bị truy thu thuế, và bị kiểm toán.</p></div></div>
+  <div class="callout"><div class="bi"><div class="en"><p><strong>This is a protection for you, not a punishment.</strong> As a W-2 employee you now get real benefits: Social Security and Medicare credits toward retirement, workers' compensation if you're hurt at work, unemployment insurance, and a clean tax record.</p></div><div class="vi"><p><strong>Đây là sự bảo vệ cho anh/chị, không phải hình phạt.</strong> Là nhân viên W-2, anh/chị nay có quyền lợi thật: tích lũy Social Security và Medicare cho lúc về hưu, bảo hiểm tai nạn lao động nếu bị thương khi làm, bảo hiểm thất nghiệp, và hồ sơ thuế sạch sẽ.</p></div></div></div>
+  <div class="bi"><div class="en"><p>We're committed to making this change smooth and fair. Please read this handbook, ask any question, and sign the last page.</p><p style="margin-top:14px;font-family:var(--fd);font-size:16px;color:var(--olive)">Warmly,<br><strong>[OWNER NAME]</strong>, Owner</p></div><div class="vi"><p>Chúng tôi cam kết làm cho sự thay đổi này nhẹ nhàng và công bằng. Mong anh/chị đọc cẩm nang này, hỏi bất cứ điều gì, và ký vào trang cuối.</p><p style="margin-top:14px;font-family:var(--fd);font-size:16px;color:var(--olive)">Thân mến,<br><strong>[TÊN CHỦ TIỆM]</strong>, Chủ tiệm</p></div></div>
+</section>
+</div>
+
+<!-- ======== 02 WHAT CHANGED ======== -->
+<div class="page">
+<section class="sec" id="s2">
+  <div class="sec-head">
+    <span class="sec-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4 3 8l4 4"/><path d="M3 8h12a4 4 0 0 1 4 4"/><path d="m17 20 4-4-4-4"/><path d="M21 16H9a4 4 0 0 1-4-4"/></svg></span>
+    <div><div class="sec-num">02</div><h2>What Changed: 1099 vs W-2 <span class="sep">/</span><span class="vh">Sự Khác Biệt Giữa 1099 và W-2</span></h2></div>
+  </div>
+  <table>
+    <thead><tr><th>Topic · Vấn đề</th><th>1099 (Contractor · Thầu phụ)</th><th>W-2 (Employee · Nhân viên)</th></tr></thead>
+    <tbody>
+      <tr><td>Taxes withheld<span class="vi">Khấu trừ thuế</span></td><td>None — you owe it later<span class="vi">Không — tự nợ, trả sau</span></td><td>Withheld each paycheck<span class="vi">Trừ sẵn mỗi kỳ lương</span></td></tr>
+      <tr><td>Self-employment tax<span class="vi">Thuế tự doanh</span></td><td>You pay full <strong>15.3%</strong><span class="vi">Anh/chị trả hết 15.3%</span></td><td>Salon pays <strong>half (7.65%)</strong><span class="vi">Tiệm trả một nửa giúp</span></td></tr>
+      <tr><td>Year-end form<span class="vi">Giấy cuối năm</span></td><td>1099-NEC</td><td>W-2 (tips in Box 12)<span class="vi">W-2 (tip ở Ô 12)</span></td></tr>
+      <tr><td>Workers' comp<span class="vi">Bồi thường tai nạn</span></td><td><span class="cross">✕</span> Usually none<span class="vi">Thường không có</span></td><td><span class="tick">✓</span> Required in LA<span class="vi">LA bắt buộc</span></td></tr>
+      <tr><td>Unemployment<span class="vi">Thất nghiệp</span></td><td><span class="cross">✕</span> Not eligible<span class="vi">Không đủ điều kiện</span></td><td><span class="tick">✓</span> Eligible<span class="vi">Đủ điều kiện</span></td></tr>
+      <tr><td>Overtime<span class="vi">Tăng ca</span></td><td><span class="cross">✕</span> No<span class="vi">Không</span></td><td><span class="tick">✓</span> 1.5x after 40 hrs<span class="vi">1.5x sau 40 giờ</span></td></tr>
+    </tbody>
+  </table>
+  <h4 style="font-size:19px;color:var(--olive);margin:18px 0 8px">"But I used to get more cash…" <span style="font-size:15px;color:var(--taupe)">/ "Nhưng hồi đó tôi được trả nhiều tiền mặt hơn…"</span></h4>
+  <div class="bi"><div class="en"><p>It can <em>feel</em> like less at first, because taxes are now taken out <strong>before</strong> you get paid. But under 1099 you still owed those taxes — you just paid a big lump sum later (often with penalties). With W-2, <strong>the salon now pays half of your Social Security and Medicare</strong> (7.65%) — money you didn't get before. You also gain workers' comp, unemployment, and retirement credits.</p></div><div class="vi"><p>Lúc đầu có thể <em>cảm thấy</em> ít hơn, vì thuế nay bị trừ <strong>trước khi</strong> nhận lương. Nhưng với 1099 anh/chị vẫn nợ số thuế đó — chỉ là trả một cục lớn sau này (nhiều khi bị phạt). Với W-2, <strong>tiệm nay trả giúp một nửa Social Security và Medicare</strong> (7.65%) — tiền mà trước kia anh/chị không có. Anh/chị còn được thêm bảo hiểm tai nạn, thất nghiệp, và tích lũy hưu trí.</p></div></div>
+  <div class="callout brass"><h4 style="font-size:18px;margin-bottom:8px">No Tax on Tips (2025–2028) <span style="font-size:14px;color:var(--taupe);font-family:var(--fb);font-weight:400">/ Không Đánh Thuế Tiền Tip</span></h4>
+    <div class="bi"><div class="en"><p>Under the federal "No Tax on Tips" rule (OBBBA), which <strong>Louisiana also follows</strong>, qualified tips can be <strong>deducted</strong> for tax years <strong>2025–2028</strong> — up to <strong>$25,000</strong> per year if your income (MAGI) is under <strong>$150,000</strong>.</p><p>⚠ You only get this if your tips are <strong>properly reported</strong> and appear in <strong>W-2 Box 12, Code TP</strong>. Reporting your tips helps you pay <strong>less</strong> tax.</p></div><div class="vi"><p>Theo luật liên bang "No Tax on Tips" (OBBBA), mà <strong>Louisiana cũng theo</strong>, tiền tip đủ điều kiện được <strong>khấu trừ</strong> cho năm thuế <strong>2025–2028</strong> — tới <strong>$25,000</strong> mỗi năm nếu thu nhập (MAGI) dưới <strong>$150,000</strong>.</p><p>⚠ Chỉ được hưởng nếu tip được <strong>khai đúng</strong> và hiện ở <strong>W-2 Ô 12, Mã TP</strong>. Khai tip giúp anh/chị đóng <strong>ít</strong> thuế hơn.</p></div></div>
+  </div>
+</section>
+</div>
+
+<!-- ======== 03 YOUR PAY ======== -->
+<div class="page">
+<section class="sec" id="s3">
+  <div class="sec-head">
+    <span class="sec-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+    <div><div class="sec-num">03</div><h2>Your Pay <span class="sep">/</span><span class="vh">Tiền Lương Của Bạn</span></h2></div>
+  </div>
+  <div class="bi"><div class="en"><p><strong>Pay schedule:</strong> we pay <strong>[ ] weekly / [ ] every two weeks</strong>, on <strong>[PAYDAY]</strong>.</p></div><div class="vi"><p><strong>Lịch trả lương:</strong> tiệm trả <strong>[ ] hàng tuần / [ ] hai tuần một lần</strong>, vào <strong>[NGÀY TRẢ LƯƠNG]</strong>.</p></div></div>
+  <div class="bi"><div class="en"><p><strong>How your pay is built:</strong> your paycheck may include (1) <strong>commission</strong> on services, (2) an <strong>hourly</strong> amount (at least minimum wage), and (3) <strong>tips</strong>. All three are reported as wages.</p></div><div class="vi"><p><strong>Lương được tính từ:</strong> lương có thể gồm (1) <strong>tiền ăn chia</strong> trên dịch vụ, (2) <strong>lương theo giờ</strong> (ít nhất bằng lương tối thiểu), và (3) <strong>tiền tip</strong>. Cả ba đều khai là thu nhập.</p></div></div>
+  <div class="bi"><div class="en"><p><strong>Minimum wage:</strong> Louisiana follows the federal floor of <strong>$7.25/hour</strong> (2026). <strong>Overtime:</strong> <strong>1.5×</strong> your rate for hours over <strong>40 in a week</strong> (federal FLSA).</p></div><div class="vi"><p><strong>Lương tối thiểu:</strong> Louisiana theo mức liên bang <strong>$7.25/giờ</strong> (2026). <strong>Tăng ca:</strong> <strong>1.5 lần</strong> lương cho giờ làm <strong>trên 40 giờ/tuần</strong> (luật liên bang FLSA).</p></div></div>
+  <h4 style="font-size:19px;color:var(--olive);margin:18px 0 6px">How to read your pay stub <span style="font-size:15px;color:var(--taupe)">/ Cách đọc phiếu lương</span></h4>
+  <table>
+    <thead><tr><th>Line · Dòng</th><th>Meaning · Ý nghĩa</th></tr></thead>
+    <tbody>
+      <tr><td>Gross Pay · Lương gộp</td><td>Total earned before taxes<span class="vi">Tổng kiếm được trước thuế</span></td></tr>
+      <tr><td>Federal W/H · Thuế LB</td><td>Federal income tax (from W-4)<span class="vi">Thuế thu nhập liên bang (theo W-4)</span></td></tr>
+      <tr><td>LA State W/H · Thuế LA</td><td>Louisiana income tax (from L-4)<span class="vi">Thuế tiểu bang LA (theo L-4)</span></td></tr>
+      <tr><td>Social Security</td><td>6.2% of wages<span class="vi">6.2% lương</span></td></tr>
+      <tr><td>Medicare</td><td>1.45% of wages<span class="vi">1.45% lương</span></td></tr>
+      <tr><td>Net Pay · Lương thực nhận</td><td>What you take home<span class="vi">Số tiền thật sự nhận</span></td></tr>
+    </tbody>
+  </table>
+  <div class="callout"><div class="bi"><div class="en"><p><strong>Direct deposit:</strong> give the salon your bank name, 9-digit routing number, account number, and account type (checking/savings); attach a voided check. <strong>Never</strong> send banking info by text or email.</p></div><div class="vi"><p><strong>Gửi lương vào ngân hàng:</strong> đưa tiệm tên ngân hàng, số routing 9 số, số tài khoản, và loại tài khoản (checking/savings); kèm một tờ check bị hủy. <strong>Đừng bao giờ</strong> gửi thông tin ngân hàng qua tin nhắn hay email.</p></div></div></div>
+  <div class="callout brass"><div class="bi"><div class="en"><p><strong>Tip reporting (your duty):</strong> if you get <strong>$20+ in tips in a month</strong>, report the total to the salon in writing <strong>by the 10th of the next month</strong> (IRS Form 4070 or the salon's tip log). Reported tips appear in W-2 Box 12, Code TP.</p></div><div class="vi"><p><strong>Khai tiền tip (trách nhiệm của bạn):</strong> nếu nhận <strong>$20 tip trở lên trong tháng</strong>, khai tổng cho tiệm bằng giấy <strong>trước ngày 10 tháng sau</strong> (IRS Form 4070 hoặc sổ tip của tiệm). Tip đã khai hiện ở W-2 Ô 12, Mã TP.</p></div></div></div>
+</section>
+</div>
+
+<!-- ======== 04 YOUR TAXES ======== -->
+<div class="page">
+<section class="sec" id="s4">
+  <div class="sec-head">
+    <span class="sec-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg></span>
+    <div><div class="sec-num">04</div><h2>Your Taxes <span class="sep">/</span><span class="vh">Thuế Của Bạn</span></h2></div>
+  </div>
+  <h4 style="font-size:18px;color:var(--olive);margin:4px 0 6px">Federal — Form W-4 <span style="font-size:14px;color:var(--taupe);font-family:var(--fb);font-weight:400">/ Liên bang — Mẫu W-4</span></h4>
+  <div class="bi"><div class="en"><p>Your <strong>W-4</strong> tells the salon how much <strong>federal income tax</strong> to withhold. Complete <strong>Step 1</strong> (name, SSN, filing status) and <strong>Step 5</strong> (sign). Use Step 3 for dependents and Step 4(b) for extra deductions (including the No Tax on Tips deduction, if eligible).</p></div><div class="vi"><p><strong>W-4</strong> cho tiệm biết phải trừ bao nhiêu <strong>thuế thu nhập liên bang</strong>. Điền <strong>Bước 1</strong> (tên, SSN, tình trạng khai thuế) và <strong>Bước 5</strong> (ký tên). Bước 3 cho người phụ thuộc, Bước 4(b) cho khấu trừ thêm (kể cả "No Tax on Tips" nếu đủ điều kiện).</p></div></div>
+  <h4 style="font-size:18px;color:var(--olive);margin:14px 0 6px">Louisiana — Form L-4 <span style="font-size:14px;color:var(--taupe);font-family:var(--fb);font-weight:400">/ Louisiana — Mẫu L-4</span></h4>
+  <div class="bi"><div class="en"><p>Your <strong>L-4 (R-1300)</strong> sets your <strong>Louisiana</strong> withholding. Louisiana now has a <strong>flat 3% income tax</strong> (2025); employers withhold at a slightly higher <strong>3.09%</strong> buffer so you don't underpay. If you don't file an L-4, the salon must withhold with <strong>no standard deduction</strong> (more tax taken out).</p></div><div class="vi"><p><strong>L-4 (R-1300)</strong> đặt mức khấu trừ thuế <strong>Louisiana</strong>. Louisiana nay tính <strong>thuế phẳng 3%</strong> (2025); tiệm trừ ở mức <strong>3.09%</strong> (cao hơn chút) để anh/chị khỏi thiếu thuế. Nếu không nộp L-4, tiệm phải trừ <strong>không có khấu trừ chuẩn</strong> (bị trừ nhiều thuế hơn).</p></div></div>
+  <h4 style="font-size:18px;color:var(--olive);margin:14px 0 6px">FICA — Social Security + Medicare</h4>
+  <div class="bi"><div class="en"><p><strong>FICA</strong> funds your future. <strong>Social Security 6.2%</strong> and <strong>Medicare 1.45%</strong> come out of your pay (7.65% total), and <strong>the salon pays the same amount again for you</strong>. These build your Social Security retirement and disability credits — money you get back later. Under 1099 you paid the whole 15.3% yourself.</p></div><div class="vi"><p><strong>FICA</strong> xây tương lai cho anh/chị. <strong>Social Security 6.2%</strong> và <strong>Medicare 1.45%</strong> trừ vào lương (tổng 7.65%), và <strong>tiệm đóng thêm đúng bằng số đó giúp anh/chị</strong>. Những khoản này tích lũy hưu trí và trợ cấp tàn tật — tiền nhận lại lúc về già. Với 1099, anh/chị tự trả hết 15.3%.</p></div></div>
+  <div class="callout"><div class="bi"><div class="en"><p><strong>Adjusting withholding:</strong> you can change your W-4 or L-4 <strong>anytime</strong> — after marriage, a new baby, or if last year's refund/bill felt wrong. Ask the salon for a new form; changes start next payroll.</p></div><div class="vi"><p><strong>Điều chỉnh khấu trừ:</strong> có thể đổi W-4 hoặc L-4 <strong>bất cứ lúc nào</strong> — sau khi cưới, có em bé, hoặc nếu năm ngoái tiền hoàn/nợ thuế thấy không ổn. Xin tiệm mẫu mới; thay đổi bắt đầu từ kỳ lương kế tiếp.</p></div></div></div>
+</section>
+</div>
+
+<!-- ======== 05 BENEFITS ======== -->
+<div class="page">
+<section class="sec" id="s5">
+  <div class="sec-head">
+    <span class="sec-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+    <div><div class="sec-num">05</div><h2>Your Benefits &amp; Protections <span class="sep">/</span><span class="vh">Quyền Lợi &amp; Sự Bảo Vệ</span></h2></div>
+  </div>
+  <div class="bi"><div class="en"><p><strong>✓ Workers' Compensation (required in LA).</strong> If you're injured or get sick <strong>because of work</strong>, this covers medical care and part of your lost wages. Report any injury to the owner <strong>immediately</strong>. (Info: lwcc.com · ldol.la.gov)</p></div><div class="vi"><p><strong>✓ Bồi thường tai nạn lao động (LA bắt buộc).</strong> Nếu bị thương hoặc bệnh <strong>vì công việc</strong>, khoản này trả viện phí và một phần lương bị mất. Báo chủ tiệm <strong>ngay</strong> khi bị thương. (Thông tin: lwcc.com · ldol.la.gov)</p></div></div>
+  <div class="bi"><div class="en"><p><strong>✓ Unemployment Insurance.</strong> As a W-2 employee, if you lose your job through no fault of your own, you may qualify for unemployment benefits. (Apply: laworks.net)</p></div><div class="vi"><p><strong>✓ Bảo hiểm thất nghiệp.</strong> Là nhân viên W-2, nếu mất việc không do lỗi của mình, anh/chị có thể đủ điều kiện nhận trợ cấp thất nghiệp. (Nộp đơn: laworks.net)</p></div></div>
+  <div class="bi"><div class="en"><p><strong>✓ Louisiana Wage Payment Act.</strong> You must be paid all wages owed on time, including your final paycheck after leaving. The salon cannot illegally hold your pay.</p></div><div class="vi"><p><strong>✓ Luật Trả Lương Louisiana.</strong> Anh/chị phải được trả đủ lương đúng hạn, kể cả lương cuối cùng sau khi nghỉ. Tiệm không được giữ lương trái luật.</p></div></div>
+  <div class="callout brass"><div class="bi"><div class="en"><p><strong>✓ Your W-2 by January 31.</strong> The salon must give you your <strong>W-2</strong> by <strong>January 31</strong> each year so you can file taxes.</p></div><div class="vi"><p><strong>✓ Nhận W-2 trước 31 tháng 1.</strong> Tiệm phải đưa anh/chị mẫu <strong>W-2</strong> trước <strong>ngày 31 tháng 1</strong> mỗi năm để khai thuế.</p></div></div></div>
+</section>
+</div>
+
+<!-- ======== 06 LICENSE ======== -->
+<div class="page">
+<section class="sec" id="s6">
+  <div class="sec-head">
+    <span class="sec-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M14 9h4M14 13h4M6 16c.8-1.6 4.2-1.6 5 0"/></svg></span>
+    <div><div class="sec-num">06</div><h2>Your License <span class="sep">/</span><span class="vh">Giấy Phép Hành Nghề</span></h2></div>
+  </div>
+  <div class="bi"><div class="en"><p>You must hold an <strong>active Louisiana manicurist/cosmetology license</strong> from the <strong>Louisiana State Board of Cosmetology (LSBC)</strong>. State law requires the salon to keep a <strong>copy on file</strong>.</p></div><div class="vi"><p>Anh/chị phải có <strong>bằng làm móng/cosmetology Louisiana còn hiệu lực</strong> do <strong>Louisiana State Board of Cosmetology (LSBC)</strong> cấp. Luật buộc tiệm giữ một <strong>bản sao</strong> tại tiệm.</p></div></div>
+  <div class="callout"><div class="bi"><div class="en"><p>🌿 <strong>Your license renews every year on YOUR BIRTHDAY,</strong> with a <strong>30-day grace period</strong> after — but don't wait.</p></div><div class="vi"><p>🌿 <strong>Bằng của anh/chị gia hạn mỗi năm vào ĐÚNG NGÀY SINH NHẬT,</strong> có <strong>30 ngày gia hạn</strong> sau đó — nhưng đừng đợi.</p></div></div></div>
+  <div class="bi"><div class="en"><p>⚠ <strong>If your license expires, the salon cannot legally schedule you to work</strong> until it's renewed. This protects both of us. <strong>Verify &amp; renew</strong> at <strong>lsbc.louisiana.gov</strong>; keep your card or a printout at the salon.</p></div><div class="vi"><p>⚠ <strong>Nếu bằng hết hạn, tiệm không được phép xếp lịch cho anh/chị làm</strong> cho đến khi gia hạn xong. Điều này bảo vệ cả hai. <strong>Kiểm tra &amp; gia hạn</strong> tại <strong>lsbc.louisiana.gov</strong>; giữ thẻ hoặc bản in tại tiệm.</p></div></div>
+  <div class="bi"><div class="en"><p>🔔 <strong>Reminder policy:</strong> the salon will remind you about <strong>[30] days before your birthday</strong> to renew. Renewing on time is your responsibility.</p></div><div class="vi"><p>🔔 <strong>Chính sách nhắc nhở:</strong> tiệm sẽ nhắc anh/chị khoảng <strong>[30] ngày trước sinh nhật</strong> để gia hạn. Gia hạn đúng hạn là trách nhiệm của anh/chị.</p></div></div>
+</section>
+</div>
+
+<!-- ======== 07 RULES ======== -->
+<div class="page">
+<section class="sec" id="s7">
+  <div class="sec-head">
+    <span class="sec-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 3h6v3H9z"/><path d="M9 11h6M9 15h4"/></svg></span>
+    <div><div class="sec-num">07</div><h2>Workplace Rules <span class="sep">/</span><span class="vh">Nội Quy Làm Việc</span></h2></div>
+  </div>
+  <div class="bi"><div class="en"><p><strong>Attendance &amp; tardiness.</strong> Arrive ready by your scheduled time. If late or absent, tell the owner as early as possible (at least <strong>[ ]</strong> hours ahead). Repeated no-shows may affect your schedule.</p></div><div class="vi"><p><strong>Đi làm &amp; trễ giờ.</strong> Có mặt sẵn sàng đúng giờ đã xếp. Nếu trễ hoặc nghỉ, báo chủ tiệm càng sớm càng tốt (ít nhất <strong>[ ]</strong> giờ trước). Nghỉ không báo nhiều lần có thể ảnh hưởng đến lịch làm.</p></div></div>
+  <div class="bi"><div class="en"><p><strong>Tip policy.</strong> Tips belong to the technician who earned them (or are shared per the salon's written pool rule). Tips are <strong>reported and protected by law</strong> — the owner cannot keep your tips.</p></div><div class="vi"><p><strong>Chính sách tiền tip.</strong> Tip thuộc về người thợ đã làm (hoặc chia theo quy định hồ tip bằng văn bản của tiệm). Tip được <strong>khai và luật bảo vệ</strong> — chủ tiệm không được giữ tip của anh/chị.</p></div></div>
+  <div class="bi"><div class="en"><p><strong>Professional conduct.</strong> Be respectful to clients and coworkers. Keep your station clean. Follow the sanitation rules required by LSBC.</p></div><div class="vi"><p><strong>Tác phong chuyên nghiệp.</strong> Lịch sự với khách và đồng nghiệp. Giữ bàn làm sạch sẽ. Tuân thủ quy định vệ sinh của LSBC.</p></div></div>
+  <div class="callout"><div class="bi"><div class="en"><p>🍃 <strong>Chemical safety (OSHA).</strong> You have the right to a safe workplace, proper ventilation, gloves/masks, and to see Safety Data Sheets (SDS) for products you use. Tell the owner about fumes, spills, or unsafe conditions.</p></div><div class="vi"><p>🍃 <strong>An toàn hóa chất (OSHA).</strong> Anh/chị có quyền có nơi làm an toàn, thông gió tốt, găng tay/khẩu trang, và xem bảng an toàn (SDS) của sản phẩm. Báo chủ tiệm khi có mùi hóa chất, đổ tràn, hay điều kiện không an toàn.</p></div></div></div>
+  <div class="bi"><div class="en"><p><strong>No retaliation.</strong> No one will be punished for asking about pay, reporting an injury, renewing a license, or raising a safety concern. These are your legal rights.</p></div><div class="vi"><p><strong>Không trả đũa.</strong> Không ai bị phạt vì hỏi về lương, báo tai nạn, gia hạn bằng, hay nêu lo ngại về an toàn. Đây là quyền hợp pháp của anh/chị.</p></div></div>
+</section>
+</div>
+
+<!-- ======== 08 FAQ ======== -->
+<div class="page">
+<section class="sec" id="s8">
+  <div class="sec-head">
+    <span class="sec-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L3 21l1.8-6.5A8 8 0 1 1 21 12z"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4 1.8c0 1.5-2 2-2 2"/><path d="M11.5 16h.01"/></svg></span>
+    <div><div class="sec-num">08</div><h2>Frequently Asked Questions <span class="sep">/</span><span class="vh">Câu Hỏi Thường Gặp</span></h2></div>
+  </div>
+  <div class="faq"><div class="q">Q1 — Why are more taxes withheld now? <span class="qv">/ Tại sao bây giờ bị khấu trừ thuế nhiều hơn?</span></div>
+    <div class="bi"><div class="en"><p>Taxes aren't <em>higher</em> — they're taken out <strong>earlier</strong>, each paycheck, instead of a big bill later. Under 1099 you still owed this. And now the salon pays <strong>half your FICA (7.65%)</strong> for you.</p></div><div class="vi"><p>Thuế không <em>nhiều hơn</em> — chỉ bị trừ <strong>sớm hơn</strong>, mỗi kỳ lương, thay vì một cục lớn sau này. Với 1099 anh/chị vẫn nợ. Và bây giờ tiệm trả giúp <strong>một nửa FICA (7.65%)</strong>.</p></div></div></div>
+  <div class="faq"><div class="q">Q2 — Are tips taxed? <span class="qv">/ Tiền tip có bị tính thuế không?</span></div>
+    <div class="bi"><div class="en"><p>Tips are taxable and must be reported. <strong>But</strong> under "No Tax on Tips" (2025–2028) you can <strong>deduct up to $25,000</strong> of reported tips if income is under $150,000 — only if shown in <strong>W-2 Box 12 Code TP</strong>.</p></div><div class="vi"><p>Tip là thu nhập chịu thuế và phải khai. <strong>Nhưng</strong> theo "No Tax on Tips" (2025–2028) anh/chị có thể <strong>khấu trừ tới $25,000</strong> tiền tip đã khai nếu thu nhập dưới $150,000 — chỉ khi hiện ở <strong>W-2 Ô 12 Mã TP</strong>.</p></div></div></div>
+  <div class="faq"><div class="q">Q3 — Can I change my L-4 later? <span class="qv">/ Tôi có thể điều chỉnh L-4 sau không?</span></div>
+    <div class="bi"><div class="en"><p>Yes — anytime. Ask the salon for a new L-4 (and W-4 if needed). Changes start next payroll.</p></div><div class="vi"><p>Được — bất cứ lúc nào. Xin tiệm mẫu L-4 mới (và W-4 nếu cần). Thay đổi bắt đầu từ kỳ lương kế tiếp.</p></div></div></div>
+  <div class="faq"><div class="q">Q4 — How is overtime paid? <span class="qv">/ Nếu tôi làm thêm giờ, tôi được trả như thế nào?</span></div>
+    <div class="bi"><div class="en"><p>Hours over <strong>40 in one week</strong> are paid at <strong>1.5×</strong> your regular rate (federal law). Louisiana has no separate overtime rule.</p></div><div class="vi"><p>Giờ làm <strong>trên 40 giờ một tuần</strong> được trả <strong>1.5 lần</strong> lương thường (luật liên bang). Louisiana không có luật tăng ca riêng.</p></div></div></div>
+  <div class="faq"><div class="q">Q5 — My rights if I'm injured at work? <span class="qv">/ Tôi có quyền gì nếu bị thương tại tiệm?</span></div>
+    <div class="bi"><div class="en"><p>Tell the owner <strong>immediately</strong>. As a W-2 employee you're covered by <strong>Louisiana Workers' Compensation</strong> (medical bills + part of lost wages). You cannot be punished for reporting it.</p></div><div class="vi"><p>Báo chủ tiệm <strong>ngay</strong>. Là nhân viên W-2, anh/chị được <strong>Bồi Thường Tai Nạn Lao Động Louisiana</strong> bảo vệ (viện phí + một phần lương bị mất). Không bị phạt vì báo cáo.</p></div></div></div>
+  <div class="faq"><div class="q">Q6 — How does W-2 vs 1099 affect my filing? <span class="qv">/ W-2 khác gì 1099 khi khai thuế?</span></div>
+    <div class="bi"><div class="en"><p>With <strong>1099</strong> you filed self-employed and paid the full 15.3% self-employment tax, often a large bill. With <strong>W-2</strong>, taxes are already withheld, the salon paid half your FICA, and filing is simpler — you just use the W-2.</p></div><div class="vi"><p>Với <strong>1099</strong> anh/chị khai dạng tự doanh và trả hết 15.3% thuế tự doanh, thường bị hóa đơn lớn. Với <strong>W-2</strong>, thuế đã trừ sẵn, tiệm đã trả một nửa FICA, và khai thuế đơn giản hơn — chỉ cần dùng tờ W-2.</p></div></div></div>
+  <div class="faq"><div class="q">Q7 — When does my nail license renew? <span class="qv">/ Giấy phép nail của tôi gia hạn khi nào?</span></div>
+    <div class="bi"><div class="en"><p>On <strong>your birthday</strong>, every year, with a <strong>30-day grace period</strong>. Renew at <strong>lsbc.louisiana.gov</strong>. If it expires, you can't be scheduled until renewed.</p></div><div class="vi"><p>Vào <strong>đúng ngày sinh nhật</strong>, mỗi năm, có <strong>30 ngày gia hạn</strong>. Gia hạn tại <strong>lsbc.louisiana.gov</strong>. Nếu hết hạn, không được xếp lịch cho đến khi gia hạn.</p></div></div></div>
+</section>
+</div>
+
+<!-- ======== 09 ACKNOWLEDGMENT ======== -->
+<div class="page">
+<section class="sec" id="s9">
+  <div class="sec-head">
+    <span class="sec-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l9-9 4 4-9 9H3z"/><path d="M14 6l3-3 4 4-3 3"/></svg></span>
+    <div><div class="sec-num">09</div><h2>Acknowledgment Page <span class="sep">/</span><span class="vh">Trang Xác Nhận</span></h2></div>
+  </div>
+  <div class="callout"><div class="bi"><div class="en"><p>I acknowledge that I have <strong>received, read, and understood</strong> this Employee Handbook. I understand it explains my pay, taxes, benefits, license duties, and workplace rules, that it may be updated, and that it is <strong>not</strong> legal or tax advice for my personal situation.</p></div><div class="vi"><p>Tôi xác nhận đã <strong>nhận, đọc, và hiểu</strong> Cẩm Nang Nhân Viên này. Tôi hiểu nó giải thích về lương, thuế, quyền lợi, trách nhiệm về bằng cấp, và nội quy; có thể được cập nhật; và <strong>không phải</strong> tư vấn pháp lý hay thuế cho hoàn cảnh riêng của tôi.</p></div></div></div>
+  <div class="ack-grid">
+    <div class="ack-box"><h4>Employee · Nhân viên</h4>
+      <div class="sigline"></div><div class="sigcap">Name · Họ tên</div>
+      <div class="sigline" style="margin-top:18px"></div><div class="sigcap">Signature · Chữ ký</div>
+      <div class="sigline" style="margin-top:18px"></div><div class="sigcap">Date received · Ngày nhận</div>
+    </div>
+    <div class="ack-box"><h4>Employer · Chủ tiệm</h4>
+      <div class="sigline"></div><div class="sigcap">Name · Họ tên</div>
+      <div class="sigline" style="margin-top:18px"></div><div class="sigcap">Signature · Chữ ký</div>
+      <div class="sigline" style="margin-top:18px"></div><div class="sigcap">Date · Ngày</div>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:12px;color:var(--taupe);margin-top:22px;font-style:italic">Make two copies — one for the employee, one for the salon's file. · Làm hai bản — một cho nhân viên, một lưu tại tiệm.</p>
+
+  <h4 style="font-size:20px;color:var(--olive);margin:34px 0 6px">Owner's Compliance Reference <span style="font-size:14px;color:var(--taupe);font-family:var(--fb);font-weight:400">/ Trang tham khảo cho chủ tiệm</span></h4>
+  <div class="ref-row"><div class="task">State withholding (register/file)<span class="vi">Khấu trừ thuế tiểu bang</span></div><div class="where">revenue.louisiana.gov · LaTAP</div></div>
+  <div class="ref-row"><div class="task">Unemployment insurance<span class="vi">Bảo hiểm thất nghiệp</span></div><div class="where">laworks.net</div></div>
+  <div class="ref-row"><div class="task">Workers' compensation<span class="vi">Bồi thường tai nạn</span></div><div class="where">lwcc.com · ldol.la.gov</div></div>
+  <div class="ref-row"><div class="task">License lookup &amp; renewal<span class="vi">Tra &amp; gia hạn bằng</span></div><div class="where">lsbc.louisiana.gov</div></div>
+  <div class="ref-row"><div class="task">New hire reporting — within 20 days<span class="vi">Báo cáo nhân viên mới — trong 20 ngày</span></div><div class="where">la-newhire.com</div></div>
+  <div class="ref-row"><div class="task">E-Verify — required for 20+ employees<span class="vi">E-Verify — bắt buộc nếu 20+ nhân viên</span></div><div class="where">e-verify.gov</div></div>
+  <div class="ref-row"><div class="task">Remote notarization (if needed)<span class="vi">Công chứng từ xa (nếu cần)</span></div><div class="where">NotaryCam · Notarize.com</div></div>
+  <div class="ref-row"><div class="task">Minimum wage · Overtime<span class="vi">Lương tối thiểu · Tăng ca</span></div><div class="where">$7.25/hr · 1.5× after 40 hrs</div></div>
+
+  <div class="disclaimer">
+    <div class="dh">Important — Consult a Professional · Quan trọng — Hãy hỏi chuyên gia</div>
+    <p>This handbook template is for general educational purposes only and is <strong style="color:#fff">not</strong> legal, tax, or accounting advice. Laws change, and every salon and employee situation is different. Each owner and employee should consult a licensed Louisiana CPA, enrolled agent, or attorney. Verify all forms at irs.gov, revenue.louisiana.gov, laworks.net, and lsbc.louisiana.gov.</p>
+    <p class="vi">Mẫu cẩm nang này chỉ mang tính giáo dục chung, <strong style="color:#fff">không phải</strong> tư vấn pháp lý, thuế, hay kế toán. Luật pháp thay đổi, và mỗi tiệm và mỗi nhân viên mỗi khác. Mỗi chủ tiệm và nhân viên nên hỏi một CPA, enrolled agent, hoặc luật sư Louisiana có giấy phép. Xác minh mọi mẫu đơn tại irs.gov, revenue.louisiana.gov, laworks.net, và lsbc.louisiana.gov.</p>
+  </div>
+  <div class="foot"><span>[SALON NAME · TÊN TIỆM]</span><span>[ Your salon slogan ]</span></div>
+</section>
+</div>
+
+</body>
+</html>
+</script>
+
+<script>
+(function(){
+  /* ====== STEP A: paste your Google Apps Script Web App URL (collects leads to a Sheet) ======
+     Same pattern as your other site. Leave as-is until ready. */
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbwKK9BlhzrHf7ut1UeFmpx1zAr4p29UkEHBrs6gC9Ad_VOuY0c_Hl89rq-tPZcTQw/exec';
+  /* ====== STEP B (later): payment — set this to your Stripe Payment Link to gate the download.
+     If left blank, the download runs immediately after the form (good for testing). */
+  var STRIPE_LINK = '';
+
+  var tpl = document.getElementById('tpl').textContent;
+  var pv  = document.getElementById('pv');
+  var form= document.getElementById('hbForm');
+  var logoData = '';
+
+  function val(n){ var el=form.elements[n]; return el ? (el.value||'').trim() : ''; }
+  function freq(){ return (form.querySelector('input[name=freq]:checked')||{}).value || 'weekly'; }
+
+  // build the filled handbook HTML from the template + current form values
+  function build(){
+    var s = tpl;
+    var salon = val('salon'), owner = val('owner'), addr = val('address'),
+        slogan = val('slogan'), payday = val('payday'), eff = val('effdate');
+
+    function set(tokens, value){ if(!value) return; tokens.forEach(function(t){ s = s.split(t).join(value); }); }
+    set(['[SALON NAME / TÊN TIỆM]','[SALON NAME · TÊN TIỆM]','[SALON NAME]','[TÊN TIỆM]'], salon);
+    set(['[OWNER NAME / TÊN CHỦ TIỆM]','[OWNER NAME]','[TÊN CHỦ TIỆM]'], owner);
+    set(['[SALON ADDRESS / ĐỊA CHỈ]','[SALON ADDRESS]'], addr);
+    set(['[DATE / NGÀY]','[DATE]','[NGÀY]'], eff);
+    set(['[PAYDAY]','[NGÀY TRẢ LƯƠNG]'], payday);
+    set(['[ Your salon slogan · Khẩu hiệu của tiệm ]','[ Your salon slogan ]'], slogan);
+
+    // pay frequency (replace the "[ ] weekly / [ ] every two weeks" choosers)
+    var f = freq();
+    s = s.split('[ ] weekly / [ ] every two weeks').join(f==='weekly' ? 'weekly' : 'every two weeks');
+    s = s.split('[ ] hàng tuần / [ ] hai tuần một lần').join(f==='weekly' ? 'hàng tuần' : 'hai tuần một lần');
+
+    // logo: swap the placeholder box for the uploaded image
+    if(logoData){
+      s = s.replace('<div class="logo-ph"><span class="lp1">YOUR SALON LOGO</span><span class="lp2">Logo tiệm của bạn</span></div>',
+                    '<img class="logo" src="'+logoData+'" alt="" style="width:230px;height:auto;margin-bottom:34px">');
+    }
+    return s;
+  }
+
+  // PREVIEW = clean build + a tiled "SAMPLE" watermark (the downloaded PDF stays clean)
+  function buildPreview(){
+    var tiles = '<span>XEM TRƯỚC · SAMPLE</span>'.repeat(70);
+    var wm = '<style>#wmlayer{position:fixed;inset:0;z-index:99999;pointer-events:none;display:flex;'
+           + 'flex-wrap:wrap;align-content:center;justify-content:center;gap:44px 56px;'
+           + 'transform:rotate(-24deg) scale(1.5);overflow:hidden}'
+           + '#wmlayer span{font-family:Inter,sans-serif;font-size:20px;font-weight:700;'
+           + 'letter-spacing:.22em;color:#5F6654;opacity:.13;white-space:nowrap}</style>'
+           + '<div id="wmlayer" aria-hidden="true">' + tiles + '</div>';
+    return build().replace('</body>', wm + '</body>');
+  }
+
+  var t;
+  function render(){ clearTimeout(t); t=setTimeout(function(){ pv.srcdoc = buildPreview(); }, 180); }
+  form.addEventListener('input', render);
+  form.addEventListener('change', render);
+  render();
+
+  // logo upload preview + embed
+  document.getElementById('f_logo').addEventListener('change', function(e){
+    var file = e.target.files[0]; if(!file) return;
+    var r = new FileReader();
+    r.onload = function(){ logoData = r.result;
+      document.getElementById('logoPrev').innerHTML = '<img src="'+logoData+'">'; render(); };
+    r.readAsDataURL(file);
+  });
+
+  // print the filled handbook (high-quality PDF via the browser)
+  function downloadPDF(){
+    var w = window.open('', '_blank');
+    if(!w){ alert('Please allow pop-ups to download your PDF. · Cho phép pop-up để tải PDF.'); return; }
+    w.document.open(); w.document.write(build()); w.document.close();
+    w.onload = function(){ setTimeout(function(){ w.focus(); w.print(); }, 350); };
+    document.getElementById('successBox').classList.add('show');
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    // 1) save the lead to your Google Sheet (Apps Script)
+    if(ENDPOINT.indexOf('http')===0){
+      var data = new URLSearchParams();
+      ['contact_name','contact_phone','contact_email','contact_city','salon','owner','address','slogan','payday','effdate'].forEach(function(k){
+        var el=form.elements[k]; if(el) data.append(k, el.value||''); });
+      data.append('freq', freq());
+      fetch(ENDPOINT, { method:'POST', mode:'no-cors', body:data }).catch(function(){});
+    }
+    // 2) payment (set STRIPE_LINK later to gate this). For now → straight to download.
+    if(STRIPE_LINK){ window.location.href = STRIPE_LINK; return; }
+    downloadPDF();
+  });
+  document.getElementById('dlAgain').addEventListener('click', downloadPDF);
+
+  document.getElementById('payNote').textContent =
+    STRIPE_LINK ? 'Secure checkout via Stripe.' : 'Payment setup pending — download is open for testing.';
+})();
+</script>
+</body>
+</html>

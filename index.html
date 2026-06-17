@@ -564,7 +564,7 @@
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbwKK9BlhzrHf7ut1UeFmpx1zAr4p29UkEHBrs6gC9Ad_VOuY0c_Hl89rq-tPZcTQw/exec';
   /* ====== STEP B (later): payment — set this to your Stripe Payment Link to gate the download.
      If left blank, the download runs immediately after the form (good for testing). */
-  var STRIPE_LINK = '';
+  var STRIPE_LINK = 'https://buy.stripe.com/test_28E00l6JK3inflU1sK5kk00';
 
   var tpl = document.getElementById('tpl').textContent;
   var pv  = document.getElementById('pv');
@@ -637,22 +637,45 @@
     document.getElementById('successBox').classList.add('show');
   }
 
+  // remember inputs so we can rebuild the PDF after the Stripe round-trip
+  var FIELDS=['contact_name','contact_phone','contact_email','contact_city','salon','owner','address','slogan','payday','effdate'];
+  function saveState(){
+    var o={}; FIELDS.forEach(function(k){ var el=form.elements[k]; o[k]=el?el.value:''; }); o.freq=freq();
+    try{ localStorage.setItem('hb4n', JSON.stringify(o)); }catch(e){}
+    try{ if(logoData) localStorage.setItem('hb4n_logo', logoData); else localStorage.removeItem('hb4n_logo'); }catch(e){}
+  }
+  function restoreState(){
+    var raw; try{ raw=localStorage.getItem('hb4n'); }catch(e){ return false; }
+    if(!raw) return false;
+    var o; try{ o=JSON.parse(raw); }catch(e){ return false; }
+    FIELDS.forEach(function(k){ var el=form.elements[k]; if(el && o[k]!=null) el.value=o[k]; });
+    if(o.freq){ var r=form.querySelector('input[name=freq][value="'+o.freq+'"]'); if(r) r.checked=true; }
+    try{ var lg=localStorage.getItem('hb4n_logo'); if(lg){ logoData=lg; document.getElementById('logoPrev').innerHTML='<img src="'+lg+'">'; } }catch(e){}
+    render(); return true;
+  }
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
     if(!form.reportValidity()) return;
-    // 1) save the lead to your Google Sheet (Apps Script)
+    // 1) save the lead to your Google Sheet
     if(ENDPOINT.indexOf('http')===0){
       var data = new URLSearchParams();
-      ['contact_name','contact_phone','contact_email','contact_city','salon','owner','address','slogan','payday','effdate'].forEach(function(k){
-        var el=form.elements[k]; if(el) data.append(k, el.value||''); });
+      FIELDS.forEach(function(k){ var el=form.elements[k]; if(el) data.append(k, el.value||''); });
       data.append('freq', freq());
       fetch(ENDPOINT, { method:'POST', mode:'no-cors', body:data }).catch(function(){});
     }
-    // 2) payment (set STRIPE_LINK later to gate this). For now → straight to download.
+    // 2) remember inputs (so the PDF can be rebuilt after payment)
+    saveState();
+    // 3) payment: if a Stripe link is set, send them to checkout; else download now (testing)
     if(STRIPE_LINK){ window.location.href = STRIPE_LINK; return; }
     downloadPDF();
   });
   document.getElementById('dlAgain').addEventListener('click', downloadPDF);
+
+  // returning from Stripe success (link's redirect = https://YOUR-SITE/?paid=1) → restore + auto-download
+  if(/[?&]paid=1/.test(location.search)){
+    if(restoreState()){ document.getElementById('successBox').classList.add('show'); setTimeout(downloadPDF, 700); }
+  }
 
   document.getElementById('payNote').textContent =
     STRIPE_LINK ? 'Secure checkout via Stripe.' : 'Payment setup pending — download is open for testing.';

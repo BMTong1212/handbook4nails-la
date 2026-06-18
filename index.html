@@ -921,6 +921,19 @@
      If left blank, the download runs immediately after the form (good for testing). */
   var STRIPE_LINK = 'https://buy.stripe.com/test_28E00l6JK3inflU1sK5kk00';
 
+  /* Full-package unlock: buyers who already paid for the bundle on lapayrollkit arrive
+     via ?full=1 — skip the handbook's own $29 checkout (flag persists across refresh). */
+  var FULL_UNLOCK = false;
+  try {
+    if(/[?&]full=1/.test(location.search)){ localStorage.setItem('hb4n_full','1'); }
+    FULL_UNLOCK = localStorage.getItem('hb4n_full')==='1';
+  } catch(e){ FULL_UNLOCK = /[?&]full=1/.test(location.search); }
+  if(FULL_UNLOCK){
+    STRIPE_LINK = '';
+    var _pb = document.querySelector('.cta button[type=submit]');
+    if(_pb) _pb.innerHTML = 'Build &amp; Download my PDF<small>Tạo &amp; tải PDF cẩm nang của tôi</small>';
+  }
+
   var tpl = document.getElementById('tpl').textContent;
   var pv = document.getElementById('pv');
   var form= document.getElementById('hbForm');
@@ -1033,6 +1046,7 @@
   }
 
   document.getElementById('payNote').textContent =
+    FULL_UNLOCK ? 'Trọn gói đã mở khóa — tải Cẩm nang miễn phí.' :
     STRIPE_LINK ? 'Secure checkout via Stripe.' : 'Payment setup pending — download is open for testing.';
 })();
 </script>

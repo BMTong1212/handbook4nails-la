@@ -1045,6 +1045,16 @@
     if(restoreState()){ document.getElementById('successBox').classList.add('show'); setTimeout(downloadPDF, 700); }
   }
 
+  // Pre-fill from URL params handed off from the lapayrollkit full-package checkout (?full=1&salon=...&owner=...)
+  (function(){
+    var qs; try{ qs=new URLSearchParams(location.search); }catch(e){ return; }
+    var any=false;
+    FIELDS.forEach(function(k){ if(qs.has(k)){ var el=form.elements[k]; if(el){ el.value=qs.get(k); any=true; } } });
+    var fq=qs.get('freq'); if(fq){ var r=form.querySelector('input[name=freq][value="'+fq+'"]'); if(r){ r.checked=true; any=true; } }
+    if(any){ saveState(); render(); }
+    else if(FULL_UNLOCK){ try{ restoreState(); }catch(e){} }
+  })();
+
   document.getElementById('payNote').textContent =
     FULL_UNLOCK ? 'Trọn gói đã mở khóa — tải Cẩm nang miễn phí.' :
     STRIPE_LINK ? 'Secure checkout via Stripe.' : 'Payment setup pending — download is open for testing.';
